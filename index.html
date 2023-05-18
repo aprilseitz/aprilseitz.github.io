@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Website</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>-->
+    
+</head>
+<body onload="defaultLoad()">
+    <div id="menuBar">
+        <div id="title">
+            Asian American History
+        </div>
+        <div id = "buttonz"><button id="timelineButton" class="button-84" type="button" value="Timeline">Timeline</button>
+        <button id="aboutButton" class="button-84" type="button" value="About">About</button>
+        </div>    
+    </div>
+
+    <iframe id="content" src="html/timeline.html"></iframe>
+
+    <script>
+        const aboutButton = document.getElementById("aboutButton");
+        aboutButton.addEventListener("click", clickAbout);
+
+        const timelineButton = document.getElementById("timelineButton");
+        timelineButton.addEventListener("click", clickTimeline);
+
+        function clickAbout() {
+            document.getElementById("content").src = "html/about.html";
+        }
+
+        function clickTimeline() {
+            document.getElementById("content").src = "html/timeline.html";
+    }
+    </script> 
+</body>
+</html>
+<!-- center bubbles on timeline div
+-->

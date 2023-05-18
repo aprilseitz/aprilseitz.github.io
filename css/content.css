@@ -1,0 +1,18 @@
+ body {
+background-color: #ac71bf;
+}
+
+img {
+    width: 100%;
+}
+ 
+#the-one-who-centers { 
+    display: flex;
+    justify-content: center;
+}
+
+#content {
+    background-color: antiquewhite;
+    width: 50%;
+    padding: 20 50;
+}

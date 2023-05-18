@@ -1,0 +1,189 @@
+body {
+    background-color: #ac71bf;
+    min-height: 100vh;
+}
+
+iframe {
+    height: 90vh;
+    min-width: 100vw;
+    border: 0;
+}
+
+a {
+    height: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.bubble {
+    position: relative;
+    background-color: white;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    /* Position along main axis (vertical) */
+    justify-content: center;
+    /* Position along cross axis (horizontal) */
+    align-items: center;
+}
+
+.top {
+    transform: translateY(-115%);
+    
+}
+
+.bottom {
+    transform: translateY(15%);
+}
+
+.bubble-title {
+    text-align: center;
+/*    background-color: lawngreen;*/
+    width: 110px; 
+    overflow-wrap: break-word;
+}
+
+.timeline-img {
+    width: 140px;
+    height: 120px;
+    object-fit: cover; 
+    object-position: 0px 0px;
+    border-radius: 20px;
+/*    background-color: aqua;*/
+    margin: 8px 0px;
+}
+
+.stem {
+    width: 5px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    transform: translateY(250%);
+}
+
+.bottom > .stem {
+    transform: translateY(-220%);
+}
+
+.date {
+    position: absolute;
+    transform: translateY(950%);
+}
+
+.bottom > .date {
+    transform: translateY(-850%);
+}
+
+#timeline {
+/*    background-color: aqua;*/
+    height: 100vh;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#bubbles {
+    z-index: 1;
+}
+
+#line {
+    width: 3400px;
+    height: 10px;
+    background-color: white;
+    z-index: 0;
+    transform: translateY(-50%)
+}
+
+#bubbles {
+    position: absolute;
+    top: 50vh;
+    left: 50px;
+/*    width: 300px;*/
+    transform: translateY(-50%);
+    display: flex;
+    
+}
+
+#menuBar {
+/* background-color: red;*/
+/*    height: 10vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: aqua;
+    font-size: 30px;
+    font-weight: bold;
+    /* find a font online */
+}
+
+/* CSS */
+<!-- HTML !-->
+<button class="button-48" role="button"><span class="text">Button 48</span></button>
+
+/* CSS */
+.button-48 {
+  appearance: none;
+  background-color: #FFFFFF;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Clarkson,Helvetica,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.5em 2.2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #EBEBEB;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #FFFFFF;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
