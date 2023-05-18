@@ -1,6 +1,7 @@
 body {
-    background-color: #ac71bf;
+/*    background-color: #ac71bf;*/
     min-height: 100vh;
+    margin: 0px;
 }
 
 iframe {
@@ -13,6 +14,10 @@ a {
     height: 0px;
     text-decoration: none;
     color: black;
+}
+
+.content-filler {
+    background-image:linear-gradient(#34ebd5, #83eb34);
 }
 
 .bubble {
@@ -31,12 +36,12 @@ a {
 }
 
 .top {
-    transform: translateY(-115%);
+    transform: translateY(-120%);
     
 }
 
 .bottom {
-    transform: translateY(15%);
+    transform: translateY(11.35%);
 }
 
 .bubble-title {
@@ -113,6 +118,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom:15px;
 }
 
 #title {
@@ -124,66 +130,44 @@ a {
     /* find a font online */
 }
 
-/* CSS */
+/*
 <!-- HTML !-->
-<button class="button-48" role="button"><span class="text">Button 48</span></button>
+<button class="button-89" role="button">Button 89</button>
+*/
 
 /* CSS */
-.button-48 {
-  appearance: none;
-  background-color: #FFFFFF;
-  border-width: 0;
-  box-sizing: border-box;
-  color: #000000;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Clarkson,Helvetica,sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 1em;
-  margin: 0;
-  opacity: 1;
-  outline: 0;
-  padding: 1.5em 2.2em;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-rendering: geometricprecision;
-  text-transform: uppercase;
-  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  vertical-align: baseline;
-  white-space: nowrap;
+    margin: 0px 10px;
 }
 
-.button-48:before {
-  animation: opacityFallbackOut .5s step-end forwards;
-  backface-visibility: hidden;
-  background-color: #EBEBEB;
-  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
-  content: "";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  transform: translateZ(0);
-  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
-  width: 100%;
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
 }
 
-.button-48:hover:before {
-  animation: opacityFallbackIn 0s step-start forwards;
-  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
-}
-
-.button-48:after {
-  background-color: #FFFFFF;
-}
-
-.button-48 span {
-  z-index: 1;
-  position: relative;
+.button-89:active {
+  background: var(--color);
+  color: #fff;
 }
